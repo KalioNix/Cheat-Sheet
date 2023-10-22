@@ -63,9 +63,11 @@ struct sockaddr_in{
 }
 
 struct sockaddr_in addr;
+memset(&addr, 0, sizeof(addr));
 addr.sin_family = AF_INET;
-addr.sin_port = htons(2000);
 addr.sin_addr.s_addr = htonl(INADDR_ANY);
+addr.sin_port = htons(2000);
+
 
 struct sockaddr_in6{
     short           sin6_family;   
